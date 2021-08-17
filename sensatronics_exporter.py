@@ -179,11 +179,15 @@ def webroot():
     return make_response( '<p>Bad Target</p>', 404 )
 
 
-
-
 @app.route('/metrics')
 def metrics():
   return webroot()
+
+@app.route('/health')
+def health():
+  response = make_response('OK', 200)
+  response.mimetype = 'text/plain'
+  return response
 
 
 
