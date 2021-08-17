@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from prometheus_client import start_http_server, Info, Gauge
 import xml.etree.ElementTree as ETree
 import socket, time
